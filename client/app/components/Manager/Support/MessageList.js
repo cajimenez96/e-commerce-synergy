@@ -39,7 +39,7 @@ const MessagesList = props => {
         </div>
       ) : (
         <div className='my-4'>
-          <NotFound message='No messages found.' />
+          <NotFound message='No se encontraron mensajes.' />
         </div>
       )}
     </>
@@ -76,29 +76,27 @@ const Message = memo(props => {
             {!noHeader && <> {getAvatar(message)}</>}
           </div>
         )}
-
-        <div>
-          {isMe ? (
-            <div className='mb-2 text-right text-black'>
-              {formatTime(message.time)}
-            </div>
-          ) : (
-            <div className={`d-flex mb-2 text-right`}>
-              {!noHeader && (
-                <>
-                  <p className={`mb-0 fw-normal text-black`}>
-                    {message.user.name}
-                  </p>
-                  <div className='ml-2 text-black'>
-                    {formatTime(message.time)}
-                  </div>
-                </>
-              )}
-            </div>
-          )}
-
-          <p className={`${isMe ? 'me' : ''} m-box`}>{message.value}</p>
-        </div>
+      </div>
+      <div>
+        {isMe ? (
+          <div className='mb-2 text-right text-black'>
+            {formatTime(message.time)}
+          </div>
+        ) : (
+          <div className={`d-flex mb-2 text-right`}>
+            {!noHeader && (
+              <>
+                <p className={`mb-0 fw-normal text-black`}>
+                  {message.user.name}
+                </p>
+                <div className='ml-2 text-black'>
+                  {formatTime(message.time)}
+                </div>
+              </>
+            )}
+          </div>
+        )}
+        <p className={`${isMe ? 'me' : ''} m-box`}>{message.value}</p>
       </div>
     </div>
   );

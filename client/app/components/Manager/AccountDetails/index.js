@@ -30,7 +30,7 @@ const AccountDetails = props => {
               user.email
             ) : (
               <span className='provider-email'>
-                Logged in With {user.provider}
+                Conectado con {user.provider}
               </span>
             )}
           </p>
@@ -42,9 +42,9 @@ const AccountDetails = props => {
           <Col xs='12' md='6'>
             <Input
               type={'text'}
-              label={'First Name'}
+              label={'Nombre'}
               name={'firstName'}
-              placeholder={'Please Enter Your First Name'}
+              placeholder={'Por favor ingresa tu nombre'}
               value={user.firstName ? user.firstName : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);
@@ -54,9 +54,9 @@ const AccountDetails = props => {
           <Col xs='12' md='6'>
             <Input
               type={'text'}
-              label={'Last Name'}
+              label={'Apellido'}
               name={'lastName'}
-              placeholder={'Please Enter Your Last Name'}
+              placeholder={'Por favor ingresa tu apellido'}
               value={user.lastName ? user.lastName : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);
@@ -79,9 +79,9 @@ const AccountDetails = props => {
           <Col xs='12' md='12'>
             <Input
               type={'text'}
-              label={'Phone Number'}
+              label={'Número de teléfono'}
               name={'phoneNumber'}
-              placeholder={'Please Enter Your Phone Number'}
+              placeholder={'Por favor ingresa tu número de teléfono'}
               value={user.phoneNumber ? user.phoneNumber : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);
@@ -91,7 +91,7 @@ const AccountDetails = props => {
         </Row>
         <hr />
         <div className='profile-actions'>
-          <Button type='submit' variant='secondary' text='Save changes' />
+          <Button type='submit' variant='secondary' text='Guardar cambios' />
         </div>
       </form>
     </div>

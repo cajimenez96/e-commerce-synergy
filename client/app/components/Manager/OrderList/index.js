@@ -43,25 +43,25 @@ const OrderList = props => {
               <div className='d-flex flex-column flex-xl-row justify-content-between flex-1 ml-lg-2 mr-xl-4 p-3'>
                 <div className='order-details'>
                   <div className='mb-1'>
-                    <span>Status</span>
+                    <span>Estado</span>
                     {order?.products ? (
                       <span className='order-label order-status'>{` ${order?.products[0].status}`}</span>
                     ) : (
-                      <span className='order-label order-status'>{` Unavailable`}</span>
+                      <span className='order-label order-status'>{` No disponible`}</span>
                     )}
                   </div>
                   <div className='mb-1'>
-                    <span>Order #</span>
+                    <span>Orden #</span>
                     <span className='order-label'>{` ${order._id}`}</span>
                   </div>
                   <div className='mb-1'>
-                    <span>Ordered on</span>
+                    <span>Fecha de orden</span>
                     <span className='order-label'>{` ${formatDate(
                       order.created
                     )}`}</span>
                   </div>
                   <div className='mb-1'>
-                    <span>Order Total</span>
+                    <span>Total de la orden</span>
                     <span className='order-label'>{` $${
                       order?.totalWithTax ? order?.totalWithTax : 0
                     }`}</span>

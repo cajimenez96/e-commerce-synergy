@@ -61,8 +61,8 @@ class List extends React.PureComponent {
     return (
       <div className='order-dashboard'>
         <SubPage
-          title='Your Orders'
-          actionTitle={user.role === ROLES.Admin && 'Customer Orders'}
+          title='Tus órdenes'
+          actionTitle={user.role === ROLES.Admin && 'Órdenes de clientes'}
           handleAction={() =>
             user.role === ROLES.Admin &&
             history.push('/dashboard/orders/customers')
@@ -85,14 +85,14 @@ class List extends React.PureComponent {
               )}
 
               <SearchResultMeta
-                label='orders'
+                label='órdenes'
                 count={isSearch ? filteredOrders.length : advancedFilters.count}
               />
               <OrderList orders={filteredOrders} />
             </>
           )}
           {!isLoading && !displayOrders && (
-            <NotFound message='You have no orders yet.' />
+            <NotFound message='Aún no tienes órdenes.' />
           )}
         </SubPage>
       </div>

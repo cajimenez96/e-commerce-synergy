@@ -3,7 +3,8 @@ import Button from '../../Common/Button';
 
 const UserList = props => {
   const { users, selectedUser, selectUser } = props;
-  if (!users) return null;
+  if (!users || users.length === 0)
+    return <div className='not-found'>No hay usuarios en línea.</div>;
 
   const _selectUser = u => {
     selectUser(u);

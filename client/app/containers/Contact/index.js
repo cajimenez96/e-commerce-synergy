@@ -26,7 +26,7 @@ class Contact extends React.PureComponent {
 
     return (
       <div className='contact'>
-        <h3 className='text-uppercase'>Contact Information</h3>
+        <h3 className='text-uppercase'>Información de contacto</h3>
         <hr />
         <form onSubmit={handleSubmit}>
           <Row>
@@ -34,9 +34,9 @@ class Contact extends React.PureComponent {
               <Input
                 type={'text'}
                 error={formErrors['name']}
-                label={'Name'}
+                label={'Nombre'}
                 name={'name'}
-                placeholder={'You Full Name'}
+                placeholder={'Tu nombre completo'}
                 value={contactFormData.name}
                 onInputChange={(name, value) => {
                   contactFormChange(name, value);
@@ -47,9 +47,9 @@ class Contact extends React.PureComponent {
               <Input
                 type={'text'}
                 error={formErrors['email']}
-                label={'Email'}
+                label={'Correo electrónico'}
                 name={'email'}
-                placeholder={'Your Email Address'}
+                placeholder={'Tu correo electrónico'}
                 value={contactFormData.email}
                 onInputChange={(name, value) => {
                   contactFormChange(name, value);
@@ -60,9 +60,9 @@ class Contact extends React.PureComponent {
               <Input
                 type={'textarea'}
                 error={formErrors['message']}
-                label={'Message'}
+                label={'Mensaje'}
                 name={'message'}
-                placeholder={'Please Describe Your Message'}
+                placeholder={'Por favor describe tu mensaje'}
                 value={contactFormData.message}
                 onInputChange={(name, value) => {
                   contactFormChange(name, value);
@@ -72,7 +72,7 @@ class Contact extends React.PureComponent {
           </Row>
           <hr />
           <div className='contact-actions'>
-            <Button type='submit' text='Submit' />
+            <Button type='submit' text='Enviar' />
           </div>
         </form>
       </div>

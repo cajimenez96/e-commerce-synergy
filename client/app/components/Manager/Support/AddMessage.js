@@ -10,7 +10,7 @@ const AddMessage = props => {
   const handleOnSubmit = e => {
     e.preventDefault();
     if (!message.trim()) {
-      return alert('Please type message.');
+      return alert('Por favor escribe un mensaje.');
     }
     onSubmit(message);
     setMessage('');
@@ -22,7 +22,7 @@ const AddMessage = props => {
         autoComplete='off'
         type={'text'}
         name={'message'}
-        placeholder='type message'
+        placeholder='Escribe un mensaje'
         value={message}
         onInputChange={(_, value) => setMessage(value)}
         inlineElement={<SendButton disabled={!message} />}
@@ -32,7 +32,7 @@ const AddMessage = props => {
 };
 
 const SendButton = ({ disabled }) => (
-  <Button type='submit' disabled={disabled} variant='primary' text='Send' />
+  <Button type='submit' disabled={disabled} variant='primary' text='Enviar' />
 );
 
 export default AddMessage;
