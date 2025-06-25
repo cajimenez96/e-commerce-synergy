@@ -7,6 +7,7 @@ module.exports = {
   port: process.env.PORT || 3000,
   database: {
     url: process.env.MONGO_URI
+    //url: 'mongodb+srv://growuseradm:growuseradm@clustergrow1.lmeli.mongodb.net/ecommerce-development'
   },
   jwt: {
     secret: process.env.JWT_SECRET,

@@ -1,118 +1,118 @@
 # MERN Ecommerce
 
-## Description
+## Descripción
 
-An ecommerce store built with MERN stack, and utilizes third party API's. This ecommerce store enable three main different flows or implementations:
+Una tienda de comercio electrónico construida con el stack MERN, que utiliza APIs de terceros. Esta tienda permite tres flujos principales:
 
-1. Buyers browse the store categories, products and brands
-2. Sellers or Merchants manage their own brand component
-3. Admins manage and control the entire store components 
+1. Los compradores navegan por las categorías, productos y marcas de la tienda.
+2. Los vendedores o comerciantes gestionan su propia marca y productos.
+3. Los administradores gestionan y controlan todos los componentes de la tienda.
 
-### Features:
+### Características:
 
-  * Node provides the backend environment for this application
-  * Express middleware is used to handle requests, routes
-  * Mongoose schemas to model the application data
-  * React for displaying UI components
-  * Redux to manage application's state
-  * Redux Thunk middleware to handle asynchronous redux actions
+  * Node proporciona el entorno backend para esta aplicación.
+  * Express se utiliza como middleware para manejar solicitudes y rutas.
+  * Mongoose define los esquemas para modelar los datos de la aplicación.
+  * React para mostrar los componentes de la interfaz de usuario.
+  * Redux para gestionar el estado de la aplicación.
+  * Redux Thunk para manejar acciones asíncronas en Redux.
 
 ## Demo
 
-This application is deployed on Vercel Please check it out :smile: [here](https://mern-store-gold.vercel.app).
+Esta aplicación está desplegada en Vercel. Puedes verla aquí :smile: [aquí](https://mern-store-gold.vercel.app).
 
-See admin dashboard [demo](https://mernstore-bucket.s3.us-east-2.amazonaws.com/admin.mp4)
+Ver demo del panel de administración [aquí](https://mernstore-bucket.s3.us-east-2.amazonaws.com/admin.mp4)
 
-## Docker Guide
+## Guía Docker
 
-To run this project locally you can use docker compose provided in the repository. Here is a guide on how to run this project locally using docker compose.
+Para ejecutar este proyecto localmente puedes usar Docker Compose, que ya está configurado en el repositorio. Sigue estos pasos:
 
-Clone the repository
-```
-git clone https://github.com/mohamedsamara/mern-ecommerce.git
-```
-
-Edit the dockercompose.yml file and update the the values for MONGO_URI and JWT_SECRET
-
-Then simply start the docker compose:
-
-```
-docker-compose build
-docker-compose up
-```
-
-## Database Seed
-
-* The seed command will create an admin user in the database
-* The email and password are passed with the command as arguments
-* Like below command, replace brackets with email and password. 
-* For more information, see code [here](server/utils/seed.js)
-
-```
-npm run seed:db [email-***@****.com] [password-******] // This is just an example.
-```
-
-## Install
-
-`npm install` in the project root will install dependencies in both `client` and `server`. [See package.json](package.json)
-
-Some basic Git commands are:
+1. Clona el repositorio:
 
 ```
 git clone https://github.com/mohamedsamara/mern-ecommerce.git
-cd project
+cd mern-ecommerce
+```
+
+2. (Opcional) Edita el archivo `docker-compose.yml` si necesitas cambiar los valores de `MONGO_URI` o `JWT_SECRET`.
+
+3. Construye e inicia los servicios:
+
+```
+docker-compose up --build
+```
+
+Esto levantará los servicios de frontend (client), backend (server) y base de datos (mongo).
+
+4. Accede a la aplicación:
+   - Frontend: [http://localhost:8080](http://localhost:8080)
+   - Backend/API: [http://localhost:3000](http://localhost:3000)
+
+## Seed de Base de Datos
+
+* El comando de seed creará un usuario administrador en la base de datos.
+* El email y la contraseña se pasan como argumentos en el comando.
+* Ejemplo (reemplaza los corchetes por tus datos):
+
+```
+npm run seed:db [email-***@****.com] [password-******]
+```
+
+Para más información, revisa el código [aquí](server/utils/seed.js)
+
+## Instalación manual (sin Docker)
+
+Ejecuta `npm install` en la raíz del proyecto para instalar las dependencias tanto en `client` como en `server`. [Ver package.json](package.json)
+
+Comandos básicos de Git:
+
+```
+git clone https://github.com/mohamedsamara/mern-ecommerce.git
+cd mern-ecommerce
 npm install
 ```
 
-## ENV
+## Variables de entorno (ENV)
 
-Create `.env` file for both client and server. See examples:
+Crea un archivo `.env` tanto para el cliente como para el servidor. Ejemplos:
 
-[Frontend ENV](client/.env.example)
+[Ejemplo de ENV para frontend](client/.env.example)
 
-[Backend ENV](server/.env.example)
+[Ejemplo de ENV para backend](server/.env.example)
 
+## Despliegue en Vercel
 
-## Vercel Deployment
+Tanto el frontend como el backend pueden desplegarse en Vercel desde el mismo repositorio. Al importar el repositorio en Vercel, especifica el directorio raíz como `client` o `server` según corresponda. Ver [client vercel.json](client/vercel.json) y [server vercel.json](server/vercel.json).
 
-Both frontend and backend are deployed on Vercel from the same repository. When deploying on Vercel, make sure to specifiy the root directory as `client` and `server` when importing the repository. See [client vercel.json](client/vercel.json) and [server vercel.json](server/vercel.json).
-
-## Start development
+## Desarrollo local
 
 ```
 npm run dev
 ```
 
-## Languages & tools
+## Lenguajes y herramientas
 
 - [Node](https://nodejs.org/en/)
-
 - [Express](https://expressjs.com/)
-
 - [Mongoose](https://mongoosejs.com/)
-
 - [React](https://reactjs.org/)
-
 - [Webpack](https://webpack.js.org/)
 
+### Formateador de código
 
-### Code Formatter
-
-- Add a `.vscode` directory
-- Create a file `settings.json` inside `.vscode`
-- Install Prettier - Code formatter in VSCode
-- Add the following snippet:  
+- Agrega un directorio `.vscode`.
+- Crea un archivo `settings.json` dentro de `.vscode`.
+- Instala Prettier - Code formatter en VSCode.
+- Agrega el siguiente fragmento:
 
 ```json
-
-    {
-      "editor.formatOnSave": true,
-      "prettier.singleQuote": true,
-      "prettier.arrowParens": "avoid",
-      "prettier.jsxSingleQuote": true,
-      "prettier.trailingComma": "none",
-      "javascript.preferences.quoteStyle": "single",
-    }
-
+{
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "prettier.arrowParens": "avoid",
+  "prettier.jsxSingleQuote": true,
+  "prettier.trailingComma": "none",
+  "javascript.preferences.quoteStyle": "single"
+}
 ```
 

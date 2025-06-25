@@ -8,6 +8,7 @@ const { database } = keys;
 const setupDB = async () => {
   try {
     // Connect to MongoDB
+    console.log('connecting to mongodb');
     mongoose.set('useCreateIndex', true);
     mongoose
       .connect(database.url, {
@@ -16,11 +17,11 @@ const setupDB = async () => {
         useFindAndModify: false
       })
       .then(() =>
-        console.log(`${chalk.green('✓')} ${chalk.blue('MongoDB Connected!')}`)
+        console.log(`✓ MongoDB Connected!`)
       )
       .catch(err => console.log(err));
   } catch (error) {
-    return null;
+    return error;
   }
 };
 

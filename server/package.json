@@ -8,32 +8,32 @@
     "seed:db": "node utils/seed.js"
   },
   "dependencies": {
-    "@faker-js/faker": "^8.4.1",
-    "aws-sdk": "^2.799.0",
-    "axios": "^0.21.1",
-    "bcryptjs": "^2.4.3",
+    "@faker-js/faker": "^9.8.0",
+    "aws-sdk": "^2.1692.0",
+    "axios": "^1.10.0",
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
-    "dompurify": "^2.3.8",
-    "dotenv": "^8.0.0",
-    "express": "^4.17.1",
-    "helmet": "^4.6.0",
-    "jsonwebtoken": "^8.5.1",
-    "mailchimp-api-v3": "^1.14.0",
+    "dompurify": "^3.2.6",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mailchimp-api-v3": "^1.15.0",
     "mailgun-js": "^0.22.0",
-    "mongoose": "^5.5.11",
+    "mongoose": "^8.16.0",
     "mongoose-slug-generator": "^1.0.4",
-    "multer": "^1.4.2",
-    "passport": "^0.4.0",
+    "multer": "^2.0.1",
+    "passport": "^0.7.0",
     "passport-facebook": "^3.0.0",
     "passport-google-oauth2": "^0.2.0",
-    "passport-jwt": "^4.0.0",
-    "socket.io": "^4.2.0",
-    "validatorjs": "^3.18.1"
+    "passport-jwt": "^4.0.1",
+    "socket.io": "^4.8.1",
+    "validatorjs": "^3.22.1"
   },
   "devDependencies": {
-    "chalk": "^2.4.2",
-    "cross-env": "^5.2.1",
-    "nodemon": "^1.19.1"
+    "chalk": "^4.1.2",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.10"
   }
 }
