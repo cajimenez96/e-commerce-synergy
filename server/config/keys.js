@@ -6,7 +6,7 @@ module.exports = {
   },
   port: process.env.PORT || 3000,
   database: {
-    url: process.env.MONGO_URI
+    url: process.env.MONGO_URI || "mongodb://localhost:27017/ecommerce-development",
     //url: 'mongodb+srv://growuseradm:growuseradm@clustergrow1.lmeli.mongodb.net/ecommerce-development'
   },
   jwt: {

@@ -24,13 +24,15 @@ const seedDB = async () => {
 
     console.log(`${chalk.blue('✓')} ${chalk.blue('Seed database started')}`);
 
-    if (!email || !password) throw new Error('Missing arguments');
-    const existingUser = await User.findOne({ email });
+    const adminEmail = email || 'admin@admin.com';
+    const adminPassword = password || 'admin1';
+
+    const existingUser = await User.findOne({ email: adminEmail });
     if (!existingUser) {
       console.log(`${chalk.yellow('!')} ${chalk.yellow('Seeding admin user...')}`);
       const user = new User({
-        email,
-        password,
+        email: adminEmail,
+        password: adminPassword,
         firstName: 'admin',
         lastName: 'admin',
         role: ROLES.Admin

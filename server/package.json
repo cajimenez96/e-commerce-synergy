@@ -22,7 +22,7 @@
     "mailchimp-api-v3": "^1.15.0",
     "mailgun-js": "^0.22.0",
     "mongoose": "^8.16.0",
-    "mongoose-slug-generator": "^1.0.4",
+    "slugify": "^1.6.5",
     "multer": "^2.0.1",
     "passport": "^0.7.0",
     "passport-facebook": "^3.0.0",
