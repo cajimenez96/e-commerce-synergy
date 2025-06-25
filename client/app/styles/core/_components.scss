@@ -121,3 +121,24 @@
   }
 }
 /* end slider styles */
+
+/* language switcher */
+.language-switcher {
+  .lang-btn {
+    background: transparent;
+    border: none;
+    color: $font-custom-color;
+    font-weight: 600;
+    padding: 0 2px;
+    transition: color 0.2s ease;
+
+    &.active {
+      color: $primary-bg;
+    }
+
+    &:hover {
+      color: $primary-bg;
+      cursor: pointer;
+    }
+  }
+}

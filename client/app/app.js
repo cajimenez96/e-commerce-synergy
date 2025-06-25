@@ -14,6 +14,7 @@ import { SET_AUTH } from './containers/Authentication/constants';
 import Application from './containers/Application';
 import ScrollToTop from './scrollToTop';
 import setToken from './utils/token';
+import './i18n';
 
 // Import application sass styles
 import './styles/style.scss';

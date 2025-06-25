@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
@@ -17,7 +18,7 @@ import { CloseIcon } from '../../components/Common/Icon';
 
 class NavigationMenu extends React.PureComponent {
   render() {
-    const { isMenuOpen, categories, toggleMenu } = this.props;
+    const { isMenuOpen, categories, toggleMenu, t } = this.props;
 
     const handleCategoryClick = () => {
       this.props.toggleMenu();
@@ -30,7 +31,7 @@ class NavigationMenu extends React.PureComponent {
             <Button
               borderless
               variant='empty'
-              ariaLabel='close the menu'
+              ariaLabel={t('close_menu')}
               icon={<CloseIcon />}
               onClick={toggleMenu}
             />
@@ -38,7 +39,7 @@ class NavigationMenu extends React.PureComponent {
         </div>
         <div className='menu-body'>
           <Container>
-            <h3 className='menu-title text-uppercase'>Shop By Category</h3>
+            <h3 className='menu-title text-uppercase'>{t('title')}</h3>
             <nav role='navigation'>
               <ul className='menu-list'>
                 {categories.map((link, index) => (
@@ -69,4 +70,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, actions)(NavigationMenu);
+export default connect(mapStateToProps, actions)(withTranslation('NavigationMenu')(NavigationMenu));

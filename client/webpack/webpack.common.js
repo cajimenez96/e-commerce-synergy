@@ -16,7 +16,12 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
-        exclude: /(node_modules)/
+        exclude: modulePath => {
+          // Transpile our app code always
+          if (!/node_modules/.test(modulePath)) return false;
+          // Allow specific node_modules packages to be transpiled
+          return !/node_modules\/(i18next|react-i18next|i18next-browser-languagedetector)/.test(modulePath);
+        }
       }
     ]
   },
